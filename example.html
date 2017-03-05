@@ -1,0 +1,16 @@
+<!Doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<script src="formBuilder.js" type="text/javascript"></script>
+		<div id="formContainer"></div>
+		<script>
+			var form = formBuilder("formId", "post", "http://www.example.com/");
+			form.add("txnId", "txnId", "hidden", "12345");
+			form.add("merchantId", "merchantId", "hidden", "mer1234");
+			form.generate("formContainer");
+			form.submit();
+		</script>
+	</body>
+</html>
